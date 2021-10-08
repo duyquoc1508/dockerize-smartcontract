@@ -1,0 +1,26 @@
+{
+    "name": "trufflebox-metacoin-smrat-contract",
+    "version": "0.1.0",
+    "description": "Truffle box demo smart contract repo of metacoin",
+    "scripts": {
+        "test": "truffle test",
+        "compile": "truffle compile",
+        "networks": "truffle networks",
+        "deploy": "sh ./scripts/test-contract.sh",
+        "deploy-bsc-testnet": "sh ./scripts/deploy-bsc-testnet.sh",
+        "deploy-bsc-mainnet": "sh ./scripts/deploy-bsc-mainnet.sh"
+    },
+    "engines": {
+        "node": "12.0.0",
+        "npm": "6.9.0"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "dotenv": "^6.2.0",
+        "eslint": "^5.16.0",
+        "ganache-cli": "^6.9.1",
+        "standard": "^12.0.1",
+        "truffle": "^5.0.30",
+        "@truffle/hdwallet-provider": "^1.0.0-web3one.5"
+    }
+}

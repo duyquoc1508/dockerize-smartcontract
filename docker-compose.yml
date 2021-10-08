@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  # ganache-cli ethereum node
+  ganache:
+    container_name: ganache
+    image: trufflesuite/ganache-cli
+
+  # smart contracts source for test environment tests and deployment code
+  smart-contracts:
+    container_name: smart-contracts
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    # depends_on:
+    #   - ganache
+    volumes:
+      # mount  contract build folder
+      - ./src/build:/smart-contracts/build/
+      # mount  log files
+      - ./src/logs:/smart-contracts/logs/
+
